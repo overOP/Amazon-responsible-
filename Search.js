@@ -1,37 +1,12 @@
-const hamburger = document.querySelector("#hamburger")
-const menu = document.querySelector("#menu")
-const moon = document.querySelector("#moon")
-const body = document.querySelector("body")
-const hLinks = document.querySelectorAll("#hLink")
-
-hamburger.addEventListener("click", ()=>{
-  menu.classList.toggle("hidden")
-  hamburger.classList.toggle("bg-white")
-})
-
-hLinks.forEach(link=>{
-  link.addEventListener("click", ()=>{
-    menu.classList.toggle("hidden")
-    hamburger.classList.toggle("bg-white")
-  })
-})
-
-moon.addEventListener("click", ()=>{
-  body.classList.toggle("dark")
-})
-
-
-
-function performSearch() {
-  let query = document.getElementById("search-input").value;
-  if (query.trim() !== "") {
-      window.location.href = `results.html?search=${encodeURIComponent(query)}`;
-  }
-}
-
-
-
-
+window.onload = function () {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("search");
+    if (query) {
+        document.getElementById("result").textContent = `You searched for: "${query}"`;
+    } else {
+        document.getElementById("result").textContent = "";
+    }
+};
 const container = document.getElementById('container');
 const lisItem = [
     {Image: "IMAG/A.jpg"},

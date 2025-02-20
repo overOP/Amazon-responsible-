@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="output.css" />
     <title>Amazon</title>
 </head>
-<body class="font-nunito ">
+<body class="font-nunito bg-[#e3e6e6] ">
     <div
       class=" h-screen bg-gradient-to-t  dark:from-slate-800 dark:to-slate-900 "
     >
@@ -20,7 +20,7 @@
       <nav class="w-full px-5 h-16 flex justify-evenly items-center fixed top-0 bg-[#000000] z-10 dark:bg-slate-900 text-white text-sm overflow-hidden">
           <div class="flex items-center gap-2 border border-transparent p-1 hover:border-white w-24 h-10">
             <a href="#">
-            <img class="" src="logo/amazon_logo.png" alt="" />
+            <img src="logo/amazon_logo.png" alt="" />
         </a>
           </div>
            <ul class="hidden md:flex justify-evenly items-center space-x-10 dark:text-gray-100">
@@ -32,13 +32,14 @@
             </div>
           </div>
           
-          <div class="text-black flex h-12 p-1">
+          <div class="text-black flex h-12 p-1 md:hidden lg:flex">
             <select class="bg-[#e6e6e6] px-2 rounded-lg rounded-r-none">
                 <option>All</option>
             </select>
-                <input class="w-[450px] pl-2 text-base" type="text" placeholder="Search Amazon"/>
-                <div class="bg-orange-300 rounded-lg rounded-l-none p-2">
-                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                <input id="search-input"  class="w-[31.25rem] pl-2 text-base" type="text" placeholder="Search Amazon"/>
+                <div  class="bg-orange-300 rounded-lg rounded-l-none p-2">
+                    <button onclick="performSearch()"><a href="Search.html"><i 
+                    class="fa-solid fa-magnifying-glass fa-xl"></i></a></button>
                 </div>
           </div>
           <div class="flex border border-transparent p-1 hover:border-white">
@@ -110,9 +111,144 @@
             <li class="border border-transparent p-2 hover:border-white">Sell</li>
         </ul>
       </div>
-      <main>
-        <div id="container"></div>
-      </main>
+      <div id="container"> </div>
+      <div class="absolute top-48 md:top-96">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <!-- Gaming Accessories -->
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+              <h2 class="text-lg font-bold mb-4">Gaming accessories</h2>
+              <div class="grid grid-cols-2 gap-4">
+                  <div>
+                      <img src="IMAG/A1.jpg" alt="Headsets" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Headsets</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/A2.jpg" alt="Keyboards" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Keyboards</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/A3.jpg" alt="Computer mice" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Computer mice</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/A4.jpg" alt="Chairs" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Chairs</p>
+                  </div>
+              </div>
+              <a href="#" class="text-blue-600 mt-4 block">See more</a>
+          </div>
+          
+          <!-- Fashion Deals -->
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+              <h2 class="text-lg font-bold mb-4">Shop deals in Fashion</h2>
+              <div class="grid grid-cols-2 gap-4">
+                  <div>
+                      <img src="IMAG/B1.jpg" alt="Jeans" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Jeans under $50</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/B2.jpg" alt="Tops" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Tops under $25</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/B3.jpg" alt="Dresses" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Dresses under $30</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/B4.jpg" alt="Shoes" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Shoes under $50</p>
+                  </div>
+              </div>
+              <a href="#" class="text-blue-600 mt-4 block">See all deals</a>
+          </div>
+          
+          <!-- Gaming Setup -->
+          <div class="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center">
+              <h2 class="text-lg font-bold mb-4">Get your game on</h2>
+              <img src="IMAG/Fuji_Gaming_store_Dashboard_card.jpg" alt="Gaming PC Setup" class="object-cover">
+              <a href="#" class="text-blue-600 mt-4 block">Shop gaming</a>
+          </div>
+          
+          <!-- Home Essentials -->
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+              <h2 class="text-lg font-bold mb-4">Shop for your home essentials</h2>
+              <div class="grid grid-cols-2 gap-4">
+                  <div>
+                      <img src="IMAG/D1.jpg" alt="Cleaning Tools" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Cleaning Tools</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/D2.jpg" alt="Home Storage" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Home Storage</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/D3.jpg" alt="Home Decor" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Home Decor</p>
+                  </div>
+                  <div>
+                      <img src="IMAG/D4.jpg" alt="Bedding" class="w-full h-20 object-cover">
+                      <p class="text-sm mt-2">Bedding</p>
+                  </div>
+              </div>
+              <a href="#" class="text-blue-600 mt-4 block">Discover more in Home</a>
+          </div>
+          <!--office products-->
+          <div class="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center">
+            <h2 class="text-lg font-bold mb-4">New year, new supplies</h2>
+            <img src="IMAG/XCM_CUTTLE_1555947_2997386_758x6.jpg" alt="office products" class="object-cover">
+            <a href="#" class="text-blue-600 mt-4 block">Shop office products</a>
+        </div>
+        <!--Kichen appliances-->
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+          <h2 class="text-lg font-bold mb-4">appliancesTop categories in Kitchen appliances</h2>
+          <div>
+              <div>
+                  <img src="IMAG/E1.jpg" alt="Cooker" class="w-full object-cover">
+                  <p class="text-sm mt-2">CooKer</p>
+              </div>
+              <div class="flex gap-2">
+              <div>
+                  <img src="IMAG/E2.jpg" alt="Coffee" class="w-full h-20 object-cover">
+                  <p class="text-sm mt-2">Coffee</p>
+              </div>
+              <div>
+                  <img src="IMAG/E3.jpg" alt="Pots and Pans" class="w-full h-20 object-cover">
+                  <p class="text-sm mt-2">Pots and Pans</p>
+              </div>
+              <div>
+                  <img src="IMAG/E4.jpg" alt="Kettles" class="w-full h-20 object-cover">
+                  <p class="text-sm mt-2">Kettles</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="text-blue-600 mt-4 block">Explore all products in Kitchen</a>
+      </div>
+     <!--New Home arrivals-->
+     <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h2 class="text-lg font-bold mb-4">New home arrivals under $50</h2>
+      <div class="grid grid-cols-2 gap-4">
+          <div>
+              <img src="IMAG/D1.jpg" alt="Cleaning Tools" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Cleaning Tools</p>
+          </div>
+          <div>
+              <img src="IMAG/D2.jpg" alt="Home Storage" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Home Storage</p>
+          </div>
+          <div>
+              <img src="IMAG/D3.jpg" alt="Home Decor" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Home Decor</p>
+          </div>
+          <div>
+              <img src="IMAG/D4.jpg" alt="Bedding" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Bedding</p>
+          </div>
+      </div>
+      <a href="#" class="text-blue-600 mt-4 block">Discover more in Home</a>
+  </div>
+  
+      </div>
+      </div>
     </div>
     <script src="app.js"></script>
 </body>
