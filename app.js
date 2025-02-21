@@ -31,6 +31,20 @@ function performSearch() {
 
 
 
+let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+
+
+
 
 const container = document.getElementById('container');
 const lisItem = [
@@ -73,3 +87,22 @@ rebderEacheImage(lisItem[currentIndex]);
 const intervalId = setInterval(() => {
     nextImage();
 }, 3000);
+
+
+
+
+
+const slider = document.getElementById("imageSlider");
+let index = 0;
+const images = document.querySelectorAll("#imageSlider img");
+const totalImages = images.length;
+
+document.getElementById("next").addEventListener("click", function() {
+  index = (index + 1) % totalImages;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+});
+
+document.getElementById("prev").addEventListener("click", function() {
+  index = (index - 1 + totalImages) % totalImages;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+});
