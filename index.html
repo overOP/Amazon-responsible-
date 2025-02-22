@@ -13,14 +13,12 @@
     <title>Amazon</title>
 </head>
 <body class="font-nunito bg-[#e3e6e6] ">
-    <div
-      class=" h-screen bg-gradient-to-t  dark:from-slate-800 dark:to-slate-900 "
-    >
+  
       <!-- navbar -->
       <nav id="navbar" class="w-full px-5 h-16 flex justify-evenly items-center fixed top-0 bg-[#000000] z-10 dark:bg-slate-900 text-white text-sm overflow-hidden">
           <div class="flex items-center gap-2 border border-transparent p-1 hover:border-white w-24 h-10">
             <a href="#">
-            <img src="logo/amazon_logo.png" alt="" />
+            <img src="logo/amazon_logo.png" alt="logo" />
         </a>
           </div>
            <ul class="hidden md:flex justify-evenly items-center space-x-10 dark:text-gray-100">
@@ -36,7 +34,7 @@
             <select class="bg-[#e6e6e6] px-2 rounded-lg rounded-r-none">
                 <option>All</option>
             </select>
-                <input id="search-input"  class="w-[31.25rem] pl-2 text-base" type="text" placeholder="Search Amazon"/>
+                <input id="search-input"  class="w-[48.75rem] pl-2 text-base" type="text" placeholder="Search Amazon"/>
                 <div  class="bg-orange-300 rounded-lg rounded-l-none p-2">
                     <button onclick="performSearch()"><a href="Search.html"><i 
                     class="fa-solid fa-magnifying-glass fa-xl"></i></a></button>
@@ -61,12 +59,6 @@
             <i class="fa-solid fa-cart-shopping fa-2xl"></i>
             <p class="font-bold pt-2">Cart</p>
           </div>
-          <img
-            id="moon"
-            src="logo/image.png"
-            class="hidden md:block w-5 cursor-pointer"
-            alt=""
-          />
         </ul>
           <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
             <div class="w-6 h-0.5 bg-white"></div>
@@ -111,9 +103,9 @@
             <li class="border border-transparent p-2 hover:border-white">Sell</li>
         </ul>
       </div>
-      <div id="container"> </div>
-      <div class="absolute top-48 md:top-96">
-        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+      <div class="opacity-50 md:opacity-100 lg:pr-16 lg:pl-16" id="container"> </div>
+      <div class="absolute top-48 lg:top-96 md:top-60 ">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4 pr-4 pl-4 lg:pr-24 lg:pl-24">
           <!-- Gaming Accessories -->
           <div class="bg-white p-6 shadow-lg rounded-lg">
               <h2 class="text-lg font-bold mb-4">Gaming accessories</h2>
@@ -256,9 +248,9 @@
       
 
  <!--Most wished for in Movies & TV-->
-      <div class="mt-10 bg-[#ffffff]">
-        <h2 class="text-lg font-bold mb-4">Most wished for in Movies & TV</h2>
-          <div class="flex transition-transform duration-500 gap-4 ease-in-out" id="imageSlider">
+      <div class="mt-10 max-w-[92rem] mx-auto overflow-hidden bg-[#ffffff]">
+        <h2 class="text-lg font-bold">Most wished for in Movies & TV</h2>
+          <div class="flex transition-transform duration-500 gap-4 ease-in-out p-4" id="imageSlider">
               <img src="Tv/1.jpg" alt="Image 1" class="rounded">
               <img src="Tv/2.jpg" alt="Image 2" class="rounded">
               <img src="Tv/3.jpg" alt="Image 3" class="rounded">
@@ -294,11 +286,282 @@
           <button id="prev" class="px-4 py-2 bg-blue-500 text-white rounded">Prev</button>
           <button id="next" class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
       </div>
-      
-     
-
+      <!--next 2-->
+      <section>
+      <div class="grid grid-cols-2 grid-p-4 gap-6 md:grid-cols-4 lg:pr-24 lg:pl-24">
+    <!--Level up your gaming-->
+    <div class="bg-white p-6 shadow-lg rounded-lg">
+      <h2 class="text-lg font-bold mb-4">Level up your gaming</h2>
+      <div class="grid grid-cols-2 gap-4">
+          <div>
+              <img src="next/1.jpg" alt="PC gaming" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">PC gaming</p>
+          </div>
+          <div>
+              <img src="next/2.jpg" alt="Xbox" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Xbox</p>
+          </div>
+          <div>
+              <img src="next/3.jpg" alt="PlayStationr" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">PlayStation</p>
+          </div>
+          <div>
+              <img src="next/4.jpg" alt="Nintendo Switch" class="w-full h-20 object-cover">
+              <p class="text-sm mt-2">Nintendo Switch</p>
+          </div>
       </div>
+      <a href="#" class="text-blue-600 mt-4 block">Shop the latest in Gaming</a>
+  </div>
+  <!--Score the top PCs & Accessories-->
+  <div class="bg-white p-6 shadow-lg rounded-lg">
+    <h2 class="text-lg font-bold mb-4">Score the top PCs & Accessories</h2>
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <img src="next/5.jpg" alt="Desktops" class="w-full h-20 object-cover">
+            <p class="text-sm mt-2">Desktops</p>
+        </div>
+        <div>
+            <img src="next/6.jpg" alt="laptops" class="w-full h-20 object-cover">
+            <p class="text-sm mt-2">laptops</p>
+        </div>
+        <div>
+            <img src="next/7.jpg" alt="hard Drives" class="w-full h-20 object-cover">
+            <p class="text-sm mt-2">hard Drives</p>
+        </div>
+        <div>
+            <img src="next/8.jpg" alt="PC Accessories" class="w-full h-20 object-cover">
+            <p class="text-sm mt-2">PC Accessories</p>
+        </div>
     </div>
+    <a href="#" class="text-blue-600 mt-4 block">See more</a>
+</div>
+<!--level up your beauty routine-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">level up your beauty routine</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/9.jpg" alt="Makeup" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Makeup</p>
+      </div>
+      <div>
+          <img src="next/10.jpg" alt="Brushes" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Brushes</p>
+      </div>
+      <div>
+          <img src="next/11.jpg" alt="Sponges" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Sponges</p>
+      </div>
+      <div>
+          <img src="next/12.jpg" alt="Mirrors" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Mirrors</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">See more</a>
+</div>
+<!--Fantastic Finds for Home-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">Fantastic Finds for Home</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/13.jpg" alt="Kitchen" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Kitchen</p>
+      </div>
+      <div>
+          <img src="next/14.jpg" alt="Home Decor" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Home Decor</p>
+      </div>
+      <div>
+          <img src="next/15.jpg" alt="Dining" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Dining</p>
+      </div>
+      <div>
+          <img src="next/16.jpg" alt="Smart Home" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Smart Home</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">See more</a>
+</div>
+<!--Vacation getaway-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">Vacation getaway</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/17.jpg" alt="Handbags" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Handbags</p>
+      </div>
+      <div>
+          <img src="next/18.jpg" alt="Swimwear" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Swimwear</p>
+      </div>
+      <div>
+          <img src="next/19.jpg" alt="Skincare" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Skincare</p>
+      </div>
+      <div>
+          <img src="next/20.jpg" alt="Sandals" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Sandals</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">Shop more</a>
+</div>
+<!--Explore more in Sports-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">Explore more in Sports</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/21.jpg" alt="Cycling" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Cycling</p>
+      </div>
+      <div>
+          <img src="next/22.jpg" alt="Running" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Running</p>
+      </div>
+      <div>
+          <img src="next/23.jpg" alt="Exercise & Fitness" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Exercise & Fitness</p>
+      </div>
+      <div>
+          <img src="next/24.jpg" alt="Golf" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Golf</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">Explore more</a>
+</div>
+<!--Discover these beauty products for you-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">Discover these beauty products for you</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/25.jpg" alt="Skincare" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Skincare</p>
+      </div>
+      <div>
+          <img src="next/26.jpg" alt="Makeup" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Makeup</p>
+      </div>
+      <div>
+          <img src="next/27.jpg" alt="Nails" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Nails</p>
+      </div>
+      <div>
+          <img src="next/28.jpg" alt="Fragrance" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Fragrance</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">Exploren all in Beauty</a>
+</div>
+<!--most-loved watches-->
+<div class="bg-white p-6 shadow-lg rounded-lg">
+  <h2 class="text-lg font-bold mb-4">most-loved watches</h2>
+  <div class="grid grid-cols-2 gap-4">
+      <div>
+          <img src="next/29.jpg" alt="Women" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Women</p>
+      </div>
+      <div>
+          <img src="next/30.jpg" alt="Men" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Men</p>
+      </div>
+      <div>
+          <img src="next/31.jpg" alt="Girls" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Girls</p>
+      </div>
+      <div>
+          <img src="next/32.jpg" alt="Boys" class="w-full h-20 object-cover">
+          <p class="text-sm mt-2">Boys</p>
+      </div>
+  </div>
+  <a href="#" class="text-blue-600 mt-4 block">Discover more</a>
+</div>
+</div>
+</section>
+<!--Sign up-->
+  <div class="flex flex-col mt-8 gap-4 bg-white p-6  items-center justify-center">
+  <h1 class="text-3xl font-bold">See personalized recommendations</h1>
+  <button class="bg-yellow-400 text-black w-64 p-2 rounded-full ">Sign in</button>
+ <p class="text-sm flex"> New customer?<a href="#" class="text-blue-600 block underline">Start here</a></p>
+</div>
+<!--back-to-top-->
+<button class="fixed bottom-4 right-4 bg-yellow-400 text-black p-2 rounded-full" id="back-to-top">Back to Top</button>
+<!--footer-->
+<footer>
+<div class="flex justify-center bg-[#222f3e] mt-7 p-20 text-wrap">
+  <div>
+  <h2 class="text-lg font-bold text-white ">Get to Know Us</h2>
+    <a class=" text-sm gap-3 text-white" href="#">
+      <p class="hover:underline">Careers</p>
+      <p class="hover:underline">About Amazon</p>
+      <p class="hover:underline">Investor Relations</p>
+      <p class="hover:underline">Amazon Devices</p>
+      <p class="hover:underline">Amazon Science</p>
+    </a>
+</div>
+<div class="ml-[90px]">
+  <h2 class="text-lg font-bold text-white">Make Money with Us</h2>
+  <a class=" text-sm gap-3 text-white" href="#">
+   <p class="hover:underline">Sell products on Amazon</p> 
+<p class="hover:underline">Sell on Amazon Business</p>
+<p class="hover:underline">Sell apps on Amazon</p>
+<p class="hover:underline">Become an Affiliate</p>
+<p class="hover:underline">Advertise Your Products</p>
+<p class="hover:underline">Self-Publish with Us</p>
+<p class="hover:underline">Host an Amazon Hub</p>
+<p class="hover:underline">›See More Make Money<br>with Us</p>
+  </a>
+</div>
+<div class="ml-[90px]">
+  <h3 class="text-lg font-bold text-white">Amazon Payment Products</h3>
+    <a class=" text-sm gap-3 text-white" href="#">
+      <p class="hover:underline">Amazon Business Card</p>
+<p class="hover:underline">Shop with Points</p>
+<p class="hover:underline">Reload Your Balance</p>
+<p class="hover:underline">Amazon Currency Converter</p>
+    </a>
+</div>
+<div class="ml-[90px]">
+  <h3 class="text-lg font-bold text-white">COMPUTER COMPONENTS</h3>
+    <a class=" text-sm gap-3 text-white" href="#">
+      <p class="hover:underline">Amazon and COVID-19</p>
+      <p class="hover:underline">Your Account</p>
+      <p class="hover:underline">Your Orders</p>
+      <p class="hover:underline">Shipping Rates & Policies</p>
+      <p class="hover:underline">Returns & Replacements</p>
+      <p class="hover:underline">Manage Your Content and Devices</p>
+      <p class="hover:underline">Help</p>
+    </a>
+</div>
+      </div>
+      <!--last-->
+<hr>
+<div class="flex bg-[#222f3e] justify-center gap-4 p-10">
+  <img class="h-[26px] w-[76px] mt-6" src="logo/amazon_logo.png" alt="logo" />
+  <div class="flex border border-transparent p-4 hover:border-white gap-2">
+    <img class="h-4 w-5 mt-1 " src="logo/net.png" alt="USFlag">
+    <select class="text-white bg-transparent font-bold ">
+        <option>English</option>
+        <option>English - EN</option>
+        <option>español - ES</option>
+        <option>العربية - AR</option>
+        <option>Deutsch - DE</option>
+        <option>עברית - HE</option>
+        <option>한국어 - KO</option>
+        <option>português - PT</option>
+        <option>中文 (简体) - ZH</option>
+        <option>中文 (繁體) - ZH</option>
+    </select>
+  </div>
+  <div class="flex border border-transparent p-4 hover:border-white gap-3">
+    <span class="text-white">$</span>
+    <p class="text-white">USD - U.S. Dollar</p>
+  </div>
+  <div class="flex border border-transparent p-4 hover:border-white">
+    <img class="h-4 w-5 mt-1" src="logo/USFlag.png" alt="USFlag">
+    <select class="text-white bg-transparent font-bold gap-2">
+        <option>United States</option>
+    </select>
+  </div>
+</footer>
+</div>
     <script src="app.js"></script>
 </body>
 </html>

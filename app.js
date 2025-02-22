@@ -1,6 +1,6 @@
+//Navigation
 const hamburger = document.querySelector("#hamburger")
 const menu = document.querySelector("#menu")
-const moon = document.querySelector("#moon")
 const body = document.querySelector("body")
 const hLinks = document.querySelectorAll("#hLink")
 
@@ -16,12 +16,10 @@ hLinks.forEach(link=>{
   })
 })
 
-moon.addEventListener("click", ()=>{
-  body.classList.toggle("dark")
-})
 
 
 
+//Search
 function performSearch() {
   let query = document.getElementById("search-input").value;
   if (query.trim() !== "") {
@@ -30,7 +28,7 @@ function performSearch() {
 }
 
 
-
+//Scroll
 let prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
             let currentScrollPos = window.pageYOffset;
@@ -45,7 +43,7 @@ let prevScrollpos = window.pageYOffset;
 
 
 
-
+//Slider
 const container = document.getElementById('container');
 const lisItem = [
     {Image: "IMAG/A.jpg"},
@@ -91,7 +89,7 @@ const intervalId = setInterval(() => {
 
 
 
-
+//1-Slider
 const slider = document.getElementById("imageSlider");
 let index = 0;
 const images = document.querySelectorAll("#imageSlider img");
@@ -105,4 +103,20 @@ document.getElementById("next").addEventListener("click", function() {
 document.getElementById("prev").addEventListener("click", function() {
   index = (index - 1 + totalImages) % totalImages;
   slider.style.transform = `translateX(-${index * 100}%)`;
+});
+
+
+
+// Back to Top button
+const backToTopBtn = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
