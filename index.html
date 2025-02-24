@@ -16,7 +16,7 @@
 <body class="font-nunito bg-[#e3e6e6] ">
   
       <!-- navbar -->
-      <nav class="w-full px-5 h-16 flex justify-evenly items-center  top-0 bg-[#000000] z-10 dark:bg-slate-900 text-white text-sm overflow-hidden">
+      <nav class="px-5 h-16 flex justify-evenly items-center  top-0 bg-[#000000] z-10 dark:bg-slate-900 text-white text-sm  w-[32rem] md:w-[49rem] lg:w-full">
           <div class="flex items-center gap-2 border border-transparent p-1 hover:border-white w-24 h-10">
             <a href="#">
             <img src="logo/amazon_logo.png" alt="logo" />
@@ -35,7 +35,7 @@
             <select class="bg-[#e6e6e6] px-2 rounded-lg rounded-r-none">
                 <option>All</option>
             </select>
-                <input id="search-input"  class="w-[48.75rem] pl-2 text-base" type="text" placeholder="Search Amazon"/>
+                <input id="search-input"  class="lg:w-[40rem] pl-2 text-base" type="text" placeholder="Search Amazon"/>
                 <div  class="bg-orange-300 rounded-lg rounded-l-none p-2">
                     <button onclick="performSearch()"><a href="Search.html"><i 
                     class="fa-solid fa-magnifying-glass fa-xl"></i></a></button>
@@ -68,7 +68,7 @@
           </div>
           <ul
             id="menu"
-            class="hidden bg-indigo-900 absolute left-0 top-16 w-full space-y-10 rounded-b-xl md:space-y-7  text-white text-center"
+            class="hidden bg-indigo-900 absolute left-0 top-16 w-[32rem] md:w-[49rem] lg:w-full rounded-b-xl text-white text-center"
           >
             <li>
               <a id="hLink" href="#">Deliver to Nepal</a>
@@ -90,7 +90,7 @@
             </li>
           </ul>
       </nav>
-        <div class="bg-[#222F3D] h-10 flex items-center text-white text-sm pl-4">
+        <div class="bg-[#222F3D] h-10 flex items-center text-white text-sm pl-4 w-[32rem] md:w-[49rem] lg:w-full">
             <div class="flex items-center gap-1 border border-transparent p-2 hover:border-white">
                 <i class="fa-solid fa-bars fa-lg"></i>
                 <p class="font-bold">All</p>
@@ -104,13 +104,13 @@
                 <li class="border border-transparent p-2 hover:border-white">Sell</li>
             </ul>
         </div>
-      <div class="sm:w-full md:w-[61.3rem] lg:w-[90rem] md:opacity-100 lg:pr-16 lg:pl-16 " id="container"> </div>
-      <div class="absolute lg:top-96 md:top-80 ">
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-4 pr-4 pl-4 lg:pr-24 lg:pl-24">
+      <div class="w-[32rem] md:w-[49rem] lg:w-full" id="container"> </div>
+      <div class="absolute top-[12rem] lg:top-96 md:top-80 ">
+        <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-6 lg:px-24">
           <!-- Gaming Accessories -->
-          <div class="bg-white p-6 shadow-lg rounded-lg">
+          <div class="bg-white  p-6 shadow-lg rounded-lg">
               <h2 class="text-lg font-bold mb-4">Gaming accessories</h2>
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid  grid-cols-2 gap-4">
                   <div>
                       <img src="IMAG/A1.jpg" alt="Headsets" class="w-full h-20 object-cover">
                       <p class="text-sm mt-2">Headsets</p>
@@ -289,7 +289,7 @@
       </div>
       <!--next 2-->
       <section>
-      <div class="grid grid-cols-2 grid-p-4 gap-6 md:grid-cols-4 lg:pr-24 lg:pl-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:px-24">
     <!--Level up your gaming-->
     <div class="bg-white p-6 shadow-lg rounded-lg">
       <h2 class="text-lg font-bold mb-4">Level up your gaming</h2>
@@ -485,83 +485,92 @@
 <!--back-to-top-->
 <button class="fixed bottom-4 right-4 bg-yellow-400 text-black p-2 rounded-full" id="back-to-top">Back to Top</button>
 <!--footer-->
-<footer>
-<div class="flex justify-center bg-[#222f3e] mt-7 p-20 text-wrap">
-  <div>
-  <h2 class="text-lg font-bold text-white ">Get to Know Us</h2>
-    <a class=" text-sm gap-3 text-white" href="#">
-      <p class="hover:underline">Careers</p>
-      <p class="hover:underline">About Amazon</p>
-      <p class="hover:underline">Investor Relations</p>
-      <p class="hover:underline">Amazon Devices</p>
-      <p class="hover:underline">Amazon Science</p>
-    </a>
-</div>
-<div class="ml-[90px]">
-  <h2 class="text-lg font-bold text-white">Make Money with Us</h2>
-  <a class=" text-sm gap-3 text-white" href="#">
-   <p class="hover:underline">Sell products on Amazon</p> 
-<p class="hover:underline">Sell on Amazon Business</p>
-<p class="hover:underline">Sell apps on Amazon</p>
-<p class="hover:underline">Become an Affiliate</p>
-<p class="hover:underline">Advertise Your Products</p>
-<p class="hover:underline">Self-Publish with Us</p>
-<p class="hover:underline">Host an Amazon Hub</p>
-<p class="hover:underline">›See More Make Money<br>with Us</p>
-  </a>
-</div>
-<div class="ml-[90px]">
-  <h3 class="text-lg font-bold text-white">Amazon Payment Products</h3>
-    <a class=" text-sm gap-3 text-white" href="#">
-      <p class="hover:underline">Amazon Business Card</p>
-<p class="hover:underline">Shop with Points</p>
-<p class="hover:underline">Reload Your Balance</p>
-<p class="hover:underline">Amazon Currency Converter</p>
-    </a>
-</div>
-<div class="ml-[90px]">
-  <h3 class="text-lg font-bold text-white">COMPUTER COMPONENTS</h3>
-    <a class=" text-sm gap-3 text-white" href="#">
-      <p class="hover:underline">Amazon and COVID-19</p>
-      <p class="hover:underline">Your Account</p>
-      <p class="hover:underline">Your Orders</p>
-      <p class="hover:underline">Shipping Rates & Policies</p>
-      <p class="hover:underline">Returns & Replacements</p>
-      <p class="hover:underline">Manage Your Content and Devices</p>
-      <p class="hover:underline">Help</p>
-    </a>
-</div>
+<footer class="bg-[#222f3e] mt-7 p-10 text-wrap">
+    <div class="flex flex-wrap justify-center gap-10 md:grid md:grid-cols-4">
+      <div>
+        <h2 class="text-lg font-bold text-white">Get to Know Us</h2>
+        <div class="text-sm text-white space-y-2">
+          <p class="hover:underline"><a href="#">Careers</a></p>
+          <p class="hover:underline"><a href="#">About Amazon</a></p>
+          <p class="hover:underline"><a href="#">Investor Relations</a></p>
+          <p class="hover:underline"><a href="#">Amazon Devices</a></p>
+          <p class="hover:underline"><a href="#">Amazon Science</a></p>
+        </div>
       </div>
-      <!--last-->
-<hr>
-<div class="flex bg-[#222f3e] justify-center gap-4 p-10">
-  <img class="h-[26px] w-[76px] mt-6" src="logo/amazon_logo.png" alt="logo" />
-  <div class="flex border border-transparent p-4 hover:border-white gap-2">
-    <img class="h-4 w-5 mt-1 " src="logo/net.png" alt="USFlag">
-    <select class="text-white bg-transparent font-bold ">
-        <option>English</option>
-        <option>English - EN</option>
-        <option>español - ES</option>
-        <option>العربية - AR</option>
-        <option>Deutsch - DE</option>
-        <option>עברית - HE</option>
-        <option>한국어 - KO</option>
-        <option>português - PT</option>
-        <option>中文 (简体) - ZH</option>
-        <option>中文 (繁體) - ZH</option>
-    </select>
-  </div>
-  <div class="flex border border-transparent p-4 hover:border-white gap-3">
-    <span class="text-white">$</span>
-    <p class="text-white">USD - U.S. Dollar</p>
-  </div>
-  <div class="flex border border-transparent p-4 hover:border-white">
-    <img class="h-4 w-5 mt-1" src="logo/USFlag.png" alt="USFlag">
-    <select class="text-white bg-transparent font-bold gap-2">
-        <option>United States</option>
-    </select>
-  </div>
-</footer>
+      
+      <div>
+        <h2 class="text-lg font-bold text-white">Make Money with Us</h2>
+        <div class="text-sm text-white space-y-2">
+          <p class="hover:underline"><a href="#">Sell products on Amazon</a></p>
+          <p class="hover:underline"><a href="#">Sell on Amazon Business</a></p>
+          <p class="hover:underline"><a href="#">Sell apps on Amazon</a></p>
+          <p class="hover:underline"><a href="#">Become an Affiliate</a></p>
+          <p class="hover:underline"><a href="#">Advertise Your Products</a></p>
+          <p class="hover:underline"><a href="#">Self-Publish with Us</a></p>
+          <p class="hover:underline"><a href="#">Host an Amazon Hub</a></p>
+          <p class="hover:underline"><a href="#">›See More Make Money with Us</a></p>
+        </div>
+      </div>
+  
+      <div>
+        <h3 class="text-lg font-bold text-white">Amazon Payment Products</h3>
+        <div class="text-sm text-white space-y-2">
+          <p class="hover:underline"><a href="#">Amazon Business Card</a></p>
+          <p class="hover:underline"><a href="#">Shop with Points</a></p>
+          <p class="hover:underline"><a href="#">Reload Your Balance</a></p>
+          <p class="hover:underline"><a href="#">Amazon Currency Converter</a></p>
+        </div>
+      </div>
+  
+      <div>
+        <h3 class="text-lg font-bold text-white">Computer Components</h3>
+        <div class="text-sm text-white space-y-2">
+          <p class="hover:underline"><a href="#">Amazon and COVID-19</a></p>
+          <p class="hover:underline"><a href="#">Your Account</a></p>
+          <p class="hover:underline"><a href="#">Your Orders</a></p>
+          <p class="hover:underline"><a href="#">Shipping Rates & Policies</a></p>
+          <p class="hover:underline"><a href="#">Returns & Replacements</a></p>
+          <p class="hover:underline"><a href="#">Manage Your Content and Devices</a></p>
+          <p class="hover:underline"><a href="#">Help</a></p>
+        </div>
+      </div>
+    </div>
+  
+    <hr class="my-6 border-gray-600">
+  
+    <div class="flex flex-wrap justify-center gap-6 p-6">
+      <img class="h-[26px] w-[76px]" src="logo/amazon_logo.png" alt="Amazon Logo" />
+  
+      <div class="flex items-center border border-transparent p-2 hover:border-white gap-2">
+        <img class="h-4 w-5" src="logo/net.png" alt="Language">
+        <select class="text-white bg-transparent font-bold">
+          <option>English</option>
+          <option>English - EN</option>
+          <option>Español - ES</option>
+          <option>العربية - AR</option>
+          <option>Deutsch - DE</option>
+          <option>עברית - HE</option>
+          <option>한국어 - KO</option>
+          <option>Português - PT</option>
+          <option>中文 (简体) - ZH</option>
+          <option>中文 (繁體) - ZH</option>
+        </select>
+      </div>
+  
+      <div class="flex items-center border border-transparent p-2 hover:border-white gap-2">
+        <span class="text-white">$</span>
+        <p class="text-white">USD - U.S. Dollar</p>
+      </div>
+  
+      <div class="flex items-center border border-transparent p-2 hover:border-white gap-2">
+        <img class="h-4 w-5" src="logo/USFlag.png" alt="US Flag">
+        <select class="text-white bg-transparent font-bold">
+          <option>United States</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+  
 </div>
     <script src="app.js"></script>
 </body>

@@ -43,8 +43,6 @@ const rebderEacheImage = (data) => {
 const item = `
 <div class="item px-8 w-auto h-auto">
 <img src="${data.Image}" alt="${currentIndex}">
-<div>
-</div>
 </div>
 `
 container.innerHTML = item;
@@ -76,19 +74,63 @@ const intervalId = setInterval(() => {
 
 //1-Slider
 const slider = document.getElementById("imageSlider");
-let index = 0;
 const images = document.querySelectorAll("#imageSlider img");
 const totalImages = images.length;
 
+let index = 0;
+const imageWidth = images[0].clientWidth + 16; // Image width + gap (adjust if needed)
+
+// Clone the first and last images for smooth infinite scrolling
+const firstClone = images[0].cloneNode(true);
+const lastClone = images[totalImages - 29].cloneNode(true);
+
+// Append clones to the slider
+slider.appendChild(firstClone);
+slider.prepend(lastClone);
+
+const allImages = document.querySelectorAll("#imageSlider img");
+const totalSlides = allImages.length; // Includes clones
+
+// Adjust initial position
+slider.style.transform = `translateX(-${imageWidth}2px)`;
+
+function updateSlider() {
+  slider.style.transition = "transform 0.5s ease-in-out";
+  slider.style.transform = `translateX(-${(index + 1) * imageWidth}2px)`;
+}
+
+// Move to next image
 document.getElementById("next").addEventListener("click", function() {
-  index = (index + 1) % totalImages;
-  slider.style.transform = `translateX(-${index * 100}%)`;
+  if (index >= totalImages - 1) {
+    index++;
+    updateSlider();
+    setTimeout(() => {
+      slider.style.transition = "none"; // Remove transition for instant jump
+      index = 0;
+      slider.style.transform = `translateX(-${imageWidth}2px)`;
+    }, 500);
+  } else {
+    index++;
+    updateSlider();
+  }
 });
 
+// Move to previous image
 document.getElementById("prev").addEventListener("click", function() {
-  index = (index - 1 + totalImages) % totalImages;
-  slider.style.transform = `translateX(-${index * 100}%)`;
+  if (index <= 0) {
+    index--;
+    updateSlider();
+    setTimeout(() => {
+      slider.style.transition = "none"; // Remove transition for instant jump
+      index = totalImages - 1;
+      slider.style.transform = `translateX(-${(totalImages) * imageWidth}2px)`;
+    }, 500);
+  } else {
+    index--;
+    updateSlider();
+  }
 });
+
 
 
 
